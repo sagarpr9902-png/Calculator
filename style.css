@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 320px;
+    overflow: hidden;
+}
+
+.display {
+    width: 100%;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+    outline: none;
+}
+
+.display::placeholder {
+    color: #999;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.operator {
+    background: #667eea;
+    color: white;
+}
+
+.btn.operator:hover {
+    background: #5568d3;
+}
+
+.btn.clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: span 2;
+}
+
+.btn.clear:hover {
+    background: #ff5252;
+}
+
+.btn.delete {
+    background: #ffa500;
+    color: white;
+}
+
+.btn.delete:hover {
+    background: #ff8c00;
+}
+
+.btn.equals {
+    background: #51cf66;
+    color: white;
+    grid-column: span 2;
+}
+
+.btn.equals:hover {
+    background: #40c057;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .display {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
